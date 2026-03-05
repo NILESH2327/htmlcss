@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>boxmodel,margin,padding</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin:0;
+      /* it is universal selector */
+      padding:0;
+    }
+    #container{
+      background-color: lawngreen;
+      border :3px solid rgb(23,34,56);
+      /* padding-left: 5px;
+      padding-top: 15px;
+      padding-bottom: 21px; */
+      padding: 13px 14px 12px 11px;/* padding = top right bottom left */
+      margin: 14px 15px;
+      border-radius: 23px;
+      width: 567px;
+      height: 254px;
+      box-sizing: border-box;
+
+    }
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h3>it's my heading</h3>
+    <p id="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae distinctio quae qui! Deserunt facilis ducimus tenetur assumenda libero quas recusandae beatae doloribus quibusdam iusto vel ea esse, tempore perspiciatis sapiente!</p>
+  </div>
+  <div id="container">
+    <h3>it's my heading</h3>
+    <p id="second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae distinctio quae qui! Deserunt facilis ducimus tenetur assumenda libero quas recusandae beatae doloribus quibusdam iusto vel ea esse, tempore perspiciatis sapiente!</p>
+  </div>
+  <div id="container">
+    <h3>it's my heading</h3>
+    <p id="third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae distinctio quae qui! Deserunt facilis ducimus tenetur assumenda libero quas recusandae beatae doloribus quibusdam iusto vel ea esse, tempore perspiciatis sapiente!</p>
+  </div>
+<h3></h3>
+  
+  
+</body>
+</html>

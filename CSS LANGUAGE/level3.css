@@ -1,0 +1,13 @@
+#box1{
+  height: 100px;
+  width: 200px;
+  background-color: green;
+
+}
+#box2{
+  height: 50px;
+  width: 20%;
+  background-color: blue;
+  margin-left: 20%;
+}
+/* vh screen ke hisab se uska 1vh it meanss 1% */

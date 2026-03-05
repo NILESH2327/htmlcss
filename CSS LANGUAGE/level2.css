@@ -1,0 +1,26 @@
+div{
+  height: 200px;
+  background-color: pink;
+  width: 200px;
+  border-width:2px;
+  border-style:double;
+  border-color: rgb(0, 0, 0);
+  text-align: left;
+  /* border-radius: none; */
+  padding: 25px;
+  margin :25px;
+  
+}
+h2{
+  /* width: 200px; */
+  background-color: magenta;
+  height: fit-content;
+  text-align: center;
+  /* border-width:5px;
+  border-color: green;
+  border-style:dotted; */
+  /* border:width,style,color; */
+  border:5px,green,dotted;/*new method use all 3 prop*/
+  
+ 
+}

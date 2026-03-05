@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      border: 2px solid black;
+      background-color: chartreuse;
+      /* width: 2444px; */
+      height: 3444px;
+    }
+    /* postion: static{default},absolute,relative,fixed,sticky
+    relative - visible box and apne normal postion ke about hilega
+    absolute 
+    : its means parent ke about starting postion se move hone lagta hai 
+    fixed: postion the elementralative to the postion browser window
+    sticky: */
+    .box{
+      display:inline-block;
+      border:2px solid red;
+      width: 120px;
+      height: 120px;
+      margin: 3px;
+
+
+    }
+    #box3{
+      /* position: absolute; */
+      /* position: relative; */
+         /* position: fixed;?
+         */
+         position: sticky;
+         top: 2px;
+
+
+      /* top: 30px; */
+      /* right: 5px; */
+
+      
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+
+ 
+  <div class="box" id="box1">1</div>
+  <div class="box" id="box2">2</div>
+  <div class="box" id="box3">Chat with us</div>
+  <div class="box" id="box4">4</div>
+</div>
+</body>
+</html>

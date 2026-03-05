@@ -1,0 +1,56 @@
+body{
+  text-align:center;
+}
+div{
+  height: 100px;
+  width: 50px;
+  display:inline-block;
+  border:2px solid black;
+  color:white;
+
+}
+#container{
+  height: 600px;
+  width: 600px;
+  display: flex;
+  flex-direction:row;
+  /* row -main axis left to right 
+  column -main axis top to bottom  */
+  /* justify-content: center/flex-start/flex end/space between/space evenly /space around */
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  /* align-content: flex-start; */
+/* it means sara content center me aa gya 
+yahi start end kahi bhi kar sakte hai align content mein space generate nahi hota element ke bich ma  */
+  
+
+}
+#box1{
+  background-color: magenta;
+
+}
+#box2{
+  background-color: navy;
+ height: 200px;
+ /* align-self: flex-end; */
+ /* ye high priority hai  */
+ /* flex-shrink: ; 
+ agar ham chahe jitna space bach hai use flex grow kar sakte hai */
+ /* flex-grow: 1; */
+
+  
+}
+#box3{
+  background-color: orange;
+  height:75px;
+  /* flex-grow: 2; */
+}
+#box4{
+  background-color: purple;
+  
+}
+#box5{
+  background-color: green;
+  
+}

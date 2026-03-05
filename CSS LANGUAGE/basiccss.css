@@ -1,0 +1,20 @@
+*{
+  color:blue;
+  background-color: aliceblue;
+}
+p{
+  color:blue;
+  /* background-color: aqua; */
+}
+button{
+  color:blue;
+  /* background-color:black; */
+}
+.myclass{
+  color:magenta;
+}
+/* id is not same but class is same example ..id is name of student which is unique but class is same may be 
+where study all student in same class */
+#insta{
+  color:maroon;
+}

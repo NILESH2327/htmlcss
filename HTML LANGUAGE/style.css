@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+body{
+  margin: 0;
+  padding:0;
+  overflow:hidden;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+min-height: 100vh;
+font-family:'Tangerine', serif;
+}
+div{
+  position:relative;
+  z-index: 1;
+}
+
+h1{
+
+  margin: 0;
+  padding: 0;
+  font-size: 9em;
+  color: rgb(110, 128, 128) ;
+  filter: blur(2px);
+  animation: alternate 6s linear infinite;
+}
+
+ul{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+ul li{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  list-style: none;
+  background:#000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  filter: blur(5px);
+
+
+
+}
+ul li:nth-child(odd){
+  animation:alternateodd 6s linear infinite;
+  opacity: 1;
+}
+@keyframes alternateodd{
+  0%{
+    transform: translate(0,0) scale(1);
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    transform: translate(300px,-600px) scale(12);
+    opacity: 0;
+  }
+}
+ul li:nth-child(even){
+  animation:alternateEven 6s linear infinite;
+  opacity: 1;
+}
+@keyframes alternateEven{
+  0%{
+    transform: translate(0,0) scale(1);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    transform: translate(-300px,-600px) scale(12);
+    opacity: 0;
+  }
+}
+ul li :nth-child(1){
+  animation-delay:1s;
+  background:rgb(238, 9, 9);
+
+}
+ul li :nth-child(2){
+  animation-delay:2s;
+  background:rgb(238, 9, 9);
+}
+ul li :nth-child(3){
+  animation-delay:3s;
+  background-color:#ff0000 ;
+}
+ul li:nth-child(4){
+  animation-delay: 4s;
+  background: #ffee00;
+}
+ul  li:nth-child(5){
+  animation-delay: 5s;
+  background: #f406b8;
+}
+ul li:nth-child(6){
+  animation-delay: 6s;
+  background: #0810eb;
+}
+ul li :nth-child(7){
+  animation-delay:7s;
+  background-color:#ff00008e ;
+}

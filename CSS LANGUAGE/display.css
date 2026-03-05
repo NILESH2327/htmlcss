@@ -1,0 +1,28 @@
+div{
+   margin :25px;
+   padding: 25px;
+   height: 100px;
+   width: 100px;
+   border-style: groove;
+   border-width:5px;
+   border-color: black;
+   display:inline-block;
+   /* inline block is work like inline element and when its use in css its also help give margin and padding 
+   upper and lower otherwise inline not work upper and lower padding  */
+
+  
+  /* div is block ele but we change into inline property  */
+}
+#box{
+  /* visibility: hidden; only remove ele not area  */ 
+  display: none;/* to remove element and its area which cover on website page*/
+}
+h2{
+  text-align: center;
+}
+button{
+  background-color: yellow;
+  /* button is inline ele but ise bhi change kar sakte hai  */
+  display: block;
+
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Look-Ahead Carry Adder Simulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Look-Ahead Carry Adder Simulator</h1>
+        <div class="input-group">
+            <label for="inputA">Binary Input A:</label>
+            <input type="text" id="inputA" placeholder="Enter binary number (e.g., 1011)">
+        </div>
+        <div class="input-group">
+            <label for="inputB">Binary Input B:</label>
+            <input type="text" id="inputB" placeholder="Enter binary number (e.g., 0101)">
+        </div>
+        <button onclick="simulateAdder()">Simulate</button>
+        <div class="output" id="output"></div>
+    </div>
+
+    <script>
+        function simulateAdder() {
+            const inputA = document.getElementById("inputA").value;
+            const inputB = document.getElementById("inputB").value;
+
+            // Convert inputs to arrays of numbers
+            const A = inputA.split("").map(Number);
+            const B = inputB.split("").map(Number);
+
+            if (A.length !== B.length) {
+                document.getElementById("output").innerText = "Error: Inputs must be of the same length!";
+                return;
+            }
+
+            // Look-Ahead Carry Adder Logic
+            const n = A.length;
+            const G = new Array(n).fill(0);
+            const P = new Array(n).fill(0);
+            const C = new Array(n + 1).fill(0);
+            const S = new Array(n).fill(0);
+
+            // Step 1: Generate and Propagate
+            for (let i = 0; i < n; i++) {
+                G[i] = A[i] & B[i];
+                P[i] = A[i] ^ B[i];
+            }
+
+            // Step 2: Compute Carry
+            for (let i = 0; i < n; i++) {
+                C[i + 1] = G[i] | (P[i] & C[i]);
+            }
+
+            // Step 3: Compute Sum
+            for (let i = 0; i < n; i++) {
+                S[i] = P[i] ^ C[i];
+            }
+
+            // Output Results
+            const sum = S.join("");
+            const carryOut = C[n];
+            document.getElementById("output").innerHTML = `
+                <p>Sum: <strong>${sum}</strong></p>
+                <p>Carry Out: <strong>${carryOut}</strong></p>
+            `;
+        }
+    </script>
+</body>
+</html>
